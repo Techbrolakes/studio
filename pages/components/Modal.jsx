@@ -85,13 +85,13 @@ export default function ModalMessage() {
                   placeholder="Select The Size you Want"
                 >
                   <option value="Small : H9 * L10.75 * W4">
-                    Small : H9 * L10.75 * W4
+                    Small : H9 * L10.75 * W4 - Price : 10,000NGN
                   </option>
                   <option value="Medium : H12 * 15.5 * 6">
-                    Medium : H12 * 15.5 * 6
+                    Medium : H12 * 15.5 * 6 - Price : 15,000NGN
                   </option>
                   <option value="Large : H20 * L24 * W6">
-                    Large : H20 * L24 * W6
+                    Large : H20 * L24 * W6 - Price : 20,000NGN
                   </option>
                 </Select>
                 <Select
@@ -101,7 +101,7 @@ export default function ModalMessage() {
                   my={4}
                   placeholder="Delivery Option"
                 >
-                  <option value="Delivery">Delivery </option>
+                  <option value="Delivery">Delivery - Price : 1500NGN </option>
                   <option value="Collection">Collection </option>
                 </Select>
                 <Box>
@@ -128,16 +128,24 @@ export default function ModalMessage() {
                   Account Name : Studio orry{" "}
                 </span>
               </Box>
+              <p className="text-lg capitalize font-bold">
+                Payments must be made to validate pre order
+              </p>
 
               <Button type="submit" colorScheme="red">
-                Preorder
+                Pre-Order Now
               </Button>
             </Stack>
           </form>
         </Modal>
         <Group position="center" className="my-4">
-          <Button size="md" colorScheme={"red"} onClick={() => setOpened(true)}>
-            Preorder
+          <Button
+            size="md"
+            bgColor="black"
+            color="white"
+            onClick={() => setOpened(true)}
+          >
+            Pre-Order Now
           </Button>
         </Group>
       </Box>
