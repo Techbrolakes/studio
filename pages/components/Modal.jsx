@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Modal, Group, Stack } from "@mantine/core";
-import { Input, Button, Box, Select, Flex } from "@chakra-ui/react";
+import { Input, Button, Box, Select, Flex, Text } from "@chakra-ui/react";
 import { useClipboard } from "@chakra-ui/react";
 
 export default function ModalMessage() {
   const [opened, setOpened] = useState(false);
-  const [value, setValue] = useState("0505171495");
+  const [value, setValue] = useState("0605000776");
   const { hasCopied, onCopy } = useClipboard(value);
 
   return (
@@ -23,6 +23,7 @@ export default function ModalMessage() {
             <Stack spacing={8}>
               <Box>
                 <Input
+                  required
                   className="text-gray-500 font-serif"
                   name="Name"
                   placeholder="Enter Name"
@@ -31,6 +32,7 @@ export default function ModalMessage() {
 
               <Box my={4}>
                 <Input
+                  required
                   className="text-gray-500 font-serif"
                   name="Email"
                   placeholder="Enter Email"
@@ -39,6 +41,7 @@ export default function ModalMessage() {
 
               <Box>
                 <Input
+                  required
                   className="text-gray-500 font-serif"
                   name="Phone"
                   placeholder="Enter Phone Number"
@@ -47,6 +50,7 @@ export default function ModalMessage() {
 
               <Box>
                 <Select
+                  required
                   className="text-gray-500 font-serif"
                   my={4}
                   placeholder="Select The Size you Want"
@@ -56,6 +60,7 @@ export default function ModalMessage() {
                   <option value="option3">Large : H20 * L24 * W6</option>
                 </Select>
                 <Select
+                  required
                   className="text-gray-500 font-serif"
                   my={4}
                   placeholder="Delivery Option"
@@ -65,9 +70,9 @@ export default function ModalMessage() {
                 </Select>
                 <Box>
                   <span className="text-gray-500 text-xs lg:text-base mb-2">
-                    Account Number | Bank -Gt Bank
+                    Account Number | Bank - Parkway -ReadyCash
                   </span>
-                  <Flex gap="2px">
+                  <Flex gap="2px" my={2}>
                     <Input
                       value={value}
                       isReadOnly
@@ -83,6 +88,9 @@ export default function ModalMessage() {
                     </Button>
                   </Flex>
                 </Box>
+                <span className="text-gray-500 mt-2 text-xs lg:text-base mb-2">
+                  Account Name : Studio orry{" "}
+                </span>
               </Box>
 
               <Button type="submit" colorScheme="red">
