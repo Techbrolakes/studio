@@ -47,9 +47,9 @@ export default function ModalMessage() {
                   my={4}
                   placeholder="Select The Size you Want"
                 >
-                  <option value="option1">Small : </option>
-                  <option value="option2">Medium : </option>
-                  <option value="option3">Large : </option>
+                  <option value="option1">Small : H9 * L10.75 * W4</option>
+                  <option value="option2">Medium : H12 * 15.5 * 6</option>
+                  <option value="option3">Large : H20 * L24 * W6</option>
                 </Select>
                 <Select
                   className="text-gray-500 font-serif"
