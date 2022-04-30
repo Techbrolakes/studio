@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { Modal, Group, Stack } from "@mantine/core";
-import { Input, Button, Box, Select } from "@chakra-ui/react";
+import { Input, Button, Box, Select, Flex } from "@chakra-ui/react";
+import { useClipboard } from "@chakra-ui/react";
 
 export default function ModalMessage() {
   const [opened, setOpened] = useState(false);
+  const [value, setValue] = useState("0505171495");
+  const { hasCopied, onCopy } = useClipboard(value);
+
   return (
     <>
       <Box>
@@ -59,6 +63,26 @@ export default function ModalMessage() {
                   <option value="option1">Delivery </option>
                   <option value="option2">Collection </option>
                 </Select>
+                <Box>
+                  <span className="text-gray-500 text-xs lg:text-base mb-2">
+                    Account Number | Bank -Gt Bank
+                  </span>
+                  <Flex gap="2px">
+                    <Input
+                      value={value}
+                      isReadOnly
+                      placeholder="Account Number"
+                    />
+                    <Button
+                      className="text-gray-500 font-serif"
+                      onClick={onCopy}
+                      colorScheme="red"
+                      ml={2}
+                    >
+                      {hasCopied ? "Copied" : "Copy"}
+                    </Button>
+                  </Flex>
+                </Box>
               </Box>
 
               <Button type="submit" colorScheme="red">
