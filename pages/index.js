@@ -30,7 +30,7 @@ export default function Home() {
     },
   ];
   return (
-    <div>
+    <div className="scroll-smooth">
       <Head>
         <title>Studio Orry</title>
         <meta name="description" content="Launin Kasa Tote Page" />
@@ -56,19 +56,19 @@ export default function Home() {
             />
           </div>
 
-          <section className="space-y-4 px-4 lg:px-12 my-8 text-center">
-            <div>
-              <h1 className="text-lg font-semibold lg:text-3xl text-gray-800 py-4 uppercase">
-                The Launin Kasa Tote is here
+          <section className="space-y-4 px-4 lg:px-12 my-8 pt-8 text-center">
+            <div className="space-y-2">
+              <h1 className="text-5xl font-semibold lg:text-6xl text-gray-800 capitalize">
+                Launin Kasa
               </h1>
+              <p className="text-4xl font-bold">Tote</p>
+              <p className="text-3xl font-medium ">is here</p>
 
-              <button className="btn ">
-                <SayButton speak="LAUNIN KASA TOTE">
-                  <span className="capitalize text-xs lg:text-base">
-                    <GiSpeaker />
-                  </span>
-                </SayButton>
-              </button>
+              <div className="flex justify-center">
+                <audio controls>
+                  <source src="/Launin-kasa.m4a" type="audio/mp3" />
+                </audio>
+              </div>
 
               <ModalMessage />
             </div>
