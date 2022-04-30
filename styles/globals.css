@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&family=Lato:wght@400;700;900&display=swap");
+@import "~react-image-gallery/styles/css/image-gallery.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 html,
 body {
   padding: 0;
@@ -13,4 +18,23 @@ a {
 
 * {
   box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Amiko", sans-serif;
+}
+p,
+a,
+span {
+  font-family: "Lato", sans-serif;
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80;
+  }
 }
