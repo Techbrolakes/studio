@@ -44,7 +44,7 @@ export default function ModalMessage() {
           size="md"
           opened={opened}
           onClose={() => setOpened(false)}
-          title=" Preorder The Launin Kasa Tote "
+          title=" Pre-Order The Launin Kasa Tote "
         >
           <form onSubmit={FormSubmit} ref={form}>
             {" "}
@@ -52,7 +52,7 @@ export default function ModalMessage() {
               <Box>
                 <Input
                   required
-                  className="text-gray-500 font-serif"
+                  className="text-gray-500 font-lato"
                   name="Name"
                   placeholder="Enter Name"
                 />
@@ -61,7 +61,7 @@ export default function ModalMessage() {
               <Box my={4}>
                 <Input
                   required
-                  className="text-gray-500 font-serif"
+                  className="text-gray-500 font-lato"
                   name="Email"
                   placeholder="Enter Email"
                 />
@@ -70,7 +70,7 @@ export default function ModalMessage() {
               <Box>
                 <Input
                   required
-                  className="text-gray-500 font-serif"
+                  className="text-gray-500 font-lato"
                   name="Phone"
                   placeholder="Enter Phone Number"
                 />
@@ -80,7 +80,7 @@ export default function ModalMessage() {
                 <Select
                   name="Size"
                   required
-                  className="text-gray-500 font-serif"
+                  className="text-gray-500 font-lato"
                   my={4}
                   placeholder="Select The Size you Want"
                 >
@@ -105,34 +105,46 @@ export default function ModalMessage() {
                   <option value="Collection">Collection </option>
                 </Select>
                 <Box>
-                  <span className="text-gray-500 text-xs lg:text-base mb-2">
+                  <span className="text-gray-500 text-xs  font-lato lg:text-base mb-2">
                     Account Number | Bank - Parkway -ReadyCash
                   </span>
                   <Flex gap="2px" my={2}>
                     <Input
+                      className="font-lato"
                       value={value}
                       isReadOnly
                       placeholder="Account Number"
                     />
                     <Button
-                      className="text-gray-500 font-serif"
+                      className="text-gray-500 font-lato"
                       onClick={onCopy}
-                      colorScheme="red"
+                      bgColor="black"
+                      color="white"
+                      _hover={{
+                        bgColor: "#34434D",
+                      }}
                       ml={2}
                     >
                       {hasCopied ? "Copied" : "Copy"}
                     </Button>
                   </Flex>
                 </Box>
-                <span className="text-gray-500 mt-2 text-xs lg:text-base mb-2">
-                  Account Name : Studio orry{" "}
+                <span className="text-gray-500 font-lato mt-2 text-xs lg:text-base mb-2">
+                  Account Name : Studio orry
                 </span>
               </Box>
-              <p className="text-lg capitalize font-bold">
-                Payments must be made to validate pre order
+              <p className="text-lg capitalize font-bold font-lato">
+                Payment must be made to validate pre order
               </p>
 
-              <Button type="submit" colorScheme="red">
+              <Button
+                type="submit"
+                bgColor="black"
+                color="white"
+                _hover={{
+                  bgColor: "#34434D",
+                }}
+              >
                 Pre-Order Now
               </Button>
             </Stack>
@@ -143,6 +155,9 @@ export default function ModalMessage() {
             size="md"
             bgColor="black"
             color="white"
+            _hover={{
+              bgColor: "#34434D",
+            }}
             onClick={() => setOpened(true)}
           >
             Pre-Order Now
