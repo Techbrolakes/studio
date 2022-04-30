@@ -6,6 +6,7 @@ import { Menu } from "@headlessui/react";
 import { GiSpeaker } from "react-icons/gi";
 import ModalMessage from "./components/Modal";
 import { useState, useEffect } from "react";
+import ReactAudioPlayer from "react-audio-player";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -56,18 +57,16 @@ export default function Home() {
             />
           </div>
 
-          <section className="space-y-4 px-4 lg:px-12 my-8 pt-8 text-center">
+          <section className="space-y-4 px-4 lg:px-12 my-8 pt-2 text-center">
             <div className="space-y-2">
               <h1 className="text-5xl font-semibold lg:text-6xl text-gray-800 capitalize">
                 Launin Kasa
               </h1>
               <p className="text-4xl font-bold">Tote</p>
-              <p className="text-3xl font-medium ">is here</p>
+              <p className="text2xl font-medium ">is here</p>
 
               <div className="flex justify-center">
-                <audio controls>
-                  <source src="/Launin-kasa.m4a" type="audio/mp3" />
-                </audio>
+                <ReactAudioPlayer src="/Launin-kasa.m4a" autoPlay controls />
               </div>
 
               <ModalMessage />
