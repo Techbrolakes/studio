@@ -39,7 +39,7 @@ export default function ModalMessage() {
     <>
       <Box>
         <Modal
-          className="text-gray-500 font-serif"
+          className="text-gray-500 font-lato"
           centered
           size="md"
           opened={opened}
@@ -97,7 +97,7 @@ export default function ModalMessage() {
                 <Select
                   name="Delivery-Option"
                   required
-                  className="text-gray-500 font-serif"
+                  className="text-gray-500 font-lato"
                   my={4}
                   placeholder="Delivery Option"
                 >
@@ -138,6 +138,7 @@ export default function ModalMessage() {
               </p>
 
               <Button
+                className="font-lato"
                 type="submit"
                 bgColor="black"
                 color="white"
@@ -152,6 +153,7 @@ export default function ModalMessage() {
         </Modal>
         <Group position="center" className="my-4">
           <Button
+            className="font-lato"
             size="md"
             bgColor="black"
             color="white"
