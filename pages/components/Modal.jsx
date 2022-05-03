@@ -13,13 +13,12 @@ export default function ModalMessage() {
   const [noti, setNoti] = useState(false);
   const { hasCopied, onCopy } = useClipboard(value);
 
-  const FormSubmit = (e) => {
-    alert(
-      "Your Order has been received and an email will be sent to you shorty"
-    );
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setOpened(false);
     emailjs
       .sendForm(
-        "service_woi7bk3",
+        "service_za6uw5x",
         "template_cnbujto",
         form.current,
         "mrhvwkSx7vyWTZJtS"
@@ -32,7 +31,9 @@ export default function ModalMessage() {
           console.log(error.text);
         }
       );
-    e.target.reset();
+    alert(
+      "Your Order has been received and an email will be sent to you shorty"
+    );
   };
 
   return (
@@ -46,7 +47,7 @@ export default function ModalMessage() {
           onClose={() => setOpened(false)}
           title=" Pre-Order The Launin Kasa Tote "
         >
-          <form onSubmit={FormSubmit} ref={form}>
+          <form onSubmit={sendEmail} ref={form}>
             {" "}
             <Stack spacing={8}>
               <Box>
